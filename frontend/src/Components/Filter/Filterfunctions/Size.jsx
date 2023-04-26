@@ -1,9 +1,7 @@
-import { useFilter } from '../filtercontext';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Size = () => {
-
-   // const {filterDispatch, size} = useFilter();
    const {size} = useSelector(filterState=>filterState.filter)
     const filterDispatch = useDispatch();
 

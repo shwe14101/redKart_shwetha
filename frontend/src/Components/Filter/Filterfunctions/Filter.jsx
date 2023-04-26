@@ -7,7 +7,6 @@ import '../utils/index'
 import "./Filter.css";
 import '../../Home/filt.css'
 
-
 export const Filter = () => {
  const filterDispatch = useDispatch();
 

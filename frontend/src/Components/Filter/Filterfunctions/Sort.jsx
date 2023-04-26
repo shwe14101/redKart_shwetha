@@ -1,9 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useFilter } from '../filtercontext';
 import "./Filter.css";
 export const Sort = () => {
-
-    // const {filterDispatch, sort} = useFilter();
     const {sort} = useSelector(filterState=>filterState.filter)
     const filterDispatch = useDispatch();
 

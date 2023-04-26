@@ -9,36 +9,22 @@ import Cart from './Components/Home/cart';
  
 
 function App() {
-
-
   const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
-  //const[saveforlater, setSaveforLater] = useState([]);
-
+  
+  
   const handleClick = (product) => {
-    <script>
-{
-  alert("Product added to cart")
-}
-</script>
+    <script>{alert("Product added to cart")}</script>
     if (cart.indexOf(product) !== -1) return;
      setCart([...cart, product]);
-    // console.log(cart);
-
-
-   
    axios.post(`https://backend-production-7f7a.up.railway.app/cart`, product)
       .then(function(res) {
         console.log(res.data);
-        setCart([...cart, product]);
-        
+        setCart([...cart, product])   
       })
       .catch(function(err)  {
         console.error(err);
       });
-      
-
-       console.log(product);
   };
 
 
@@ -46,16 +32,10 @@ function App() {
     const ind = cart.indexOf(product);
     const arr = cart;
     arr[ind].amount += d;
-    
-
     if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
-    
+    setCart([...arr]);  
   };
 
-  // useEffect(() => {
-  //   console.log("cart change");
-  // }, [cart]);
 
   return (
     <div>

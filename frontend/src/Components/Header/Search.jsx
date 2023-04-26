@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { useFilter } from '../Filter/filtercontext';
-
-
-
 import {InputBase, Box, styled} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 const SearchContainer = styled (Box)`
@@ -64,39 +60,3 @@ const Search = () => {
     )
 }
 export default Search;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const handleSubmit = (e) => e.preventDefault()
-
-    // const {filterDispatch, size} = useFilter();
-
-   
-        
-  
-
-    // const handleSearchChange = (e) => {
-    //     if (!e.target.value) return setSearchResults(posts)
-
-    //     const resultsArray = posts.filter(post => post.title.includes(e.target.value) || post.catogory.includes(e.target.value)||post.brand.includes(e.target.value))
-
-    //     setSearchResults(resultsArray)
-
-    //     filterDispatch({
-    //         type: "SEARCH",
-    //         payload: {e}
-    //     })
-    // }

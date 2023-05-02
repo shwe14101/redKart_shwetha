@@ -41,13 +41,9 @@ function App() {
     <div>
        <Header setShow={setShow} size={cart.length}/>
        <Box style = {{marginTop:70}}>
-       <Routes>
-       {show ? (
-          
+       <Routes>    
         <Route exact path ="/" element={<Homepage handleClick={handleClick} />}/>
-      ) : (
         <Route path = "/Cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} handleClick={handleClick} />}/>
-      )}
       </Routes>
       </Box> 
 
